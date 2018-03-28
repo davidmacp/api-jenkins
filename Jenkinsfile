@@ -3,7 +3,12 @@ pipeline {
   stages {
     stage('Unit Tests') {
       steps {
-        sh 'echo \'Building environment....\''
+        sh '''export PATH=$PATH:/Users/Shared/Jenkins/Home/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation//default/bin
+echo $PATH
+node -v
+npm -v
+npm install
+npm test'''
       }
     }
   }
